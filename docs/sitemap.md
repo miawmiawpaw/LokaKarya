@@ -26,13 +26,16 @@ LokaKarya
     │   └── CTA Setor Sampah → `#form-setor`
     │
     ├── Beranda (`#beranda`)
-    │   ├── Label ekonomi sirkular lokal
+    │   ├── Label "Langkah kecil, dampak besar"
     │   ├── Headline utama
     │   ├── Deskripsi platform
     │   ├── CTA Jelajahi Produk → `#katalog-produk`
     │   ├── CTA Cari Bank Sampah → `#lokasi-bank-sampah`
     │   ├── Label data simulasi
-    │   └── Ilustrasi tote bag, botol, tanaman, dan daun
+    │   └── Carousel 4 produk pilihan (ganti otomatis tiap 4 detik)
+    │       ├── Foto, kategori, nama, dan harga produk
+    │       ├── Lihat di katalog → `#katalog-produk` (tersaring ke kategori produk)
+    │       └── Kontrol: panah, titik indikator, tombol jeda/lanjut
     │
     ├── Manfaat LokaKarya (`#manfaat`)
     │   ├── Produk UMKM Penuh Cerita
@@ -45,7 +48,7 @@ LokaKarya
     │   ├── Filter Plastik
     │   ├── Filter Kertas/Kardus
     │   ├── Filter Tekstil/Kain
-    │   ├── Grid 8 kartu produk simulasi
+    │   ├── Grid kartu produk simulasi (8 produk, tampil 4 per muatan)
     │   │   ├── Gambar produk
     │   │   ├── Badge kategori
     │   │   ├── Nama produk
@@ -53,7 +56,8 @@ LokaKarya
     │   │   ├── Harga simulasi
     │   │   ├── Beli via WhatsApp → kanal eksternal simulasi
     │   │   └── Lihat di Marketplace → kanal eksternal simulasi
-    │   └── Empty state saat filter tidak menemukan produk
+    │   ├── Muat Lebih Banyak
+    │   └── Empty state + tombol tampilkan semua produk
     │
     ├── Lokasi Bank Sampah (`#lokasi-bank-sampah`)
     │   ├── Judul dan jumlah hasil
@@ -65,9 +69,10 @@ LokaKarya
     │   │   ├── Jam operasional simulasi
     │   │   ├── Jenis sampah yang diterima
     │   │   └── Buka Google Maps → pencarian eksternal simulasi
-    │   ├── Peta ilustratif
-    │   ├── Marker lokasi aktif
-    │   └── Empty state saat pencarian/filter tidak menemukan lokasi
+    │   ├── Peta skematik dengan pin bernomor
+    │   ├── Kartu ↔ pin aktif saling sinkron
+    │   ├── Pesan cadangan bila peta gagal dimuat
+    │   └── Empty state + tombol hapus pencarian & filter
     │
     ├── Form Setor Sampah (`#form-setor`)
     │   ├── Judul dan keterangan simulasi
@@ -75,15 +80,15 @@ LokaKarya
     │   ├── Nomor WhatsApp
     │   ├── Jenis sampah
     │   ├── Tanggal penyetoran
-    │   ├── Lokasi tujuan
+    │   ├── Lokasi tujuan (hanya lokasi yang menerima jenis sampah terpilih)
     │   ├── Catatan opsional
-    │   ├── Metode penyetoran
+    │   ├── Metode penyetoran (radio)
     │   │   ├── Antar sendiri
     │   │   └── Minta dijemput
-    │   ├── Validasi frontend
+    │   ├── Validasi frontend (pesan error di bawah tiap kolom)
     │   │   ├── Field wajib tidak boleh kosong
-    │   │   ├── Nomor WhatsApp harus valid
-    │   │   └── Tanggal tidak boleh lewat
+    │   │   ├── Nomor WhatsApp harus valid (spasi/tanda hubung dibersihkan otomatis)
+    │   │   └── Tanggal tidak boleh lewat (zona waktu lokal)
     │   ├── Kirim Pendaftaran
     │   ├── Success state pengajuan simulasi
     │   └── Panel manfaat dan panduan sebelum setor
@@ -117,7 +122,8 @@ LokaKarya
 │       ├── logo/
 │       └── products/
 ├── docs/
-│   └── sitemap.md
+│   ├── sitemap.md
+│   └── *.png (screenshot UI & design system)
 └── README.md
 ```
 
@@ -126,18 +132,21 @@ LokaKarya
 ```text
 assets/js/data.js
     ├── meta
+    ├── heroProductIds
     ├── categories
     ├── benefits
     ├── products
     └── dropPoints
             ↓
 assets/js/main.js
+    ├── render hero carousel
     ├── render benefits
-    ├── render products
-    ├── filter products
+    ├── render & filter products (+ muat lebih banyak)
     ├── search/filter locations
-    ├── update active marker
-    └── validate deposit form
+    ├── sync active card ↔ map pin
+    ├── filter destination by waste type
+    ├── validate deposit form
+    └── mark active nav section
             ↓
 index.html
     ├── DOM sections

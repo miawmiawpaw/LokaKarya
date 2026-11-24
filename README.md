@@ -92,18 +92,46 @@ LokaKarya dikembangkan menggunakan HTML5, CSS3, Bootstrap 5, dan Vanilla JavaScr
 
 ## Fitur
 
-- Header floating responsive dengan anchor navigation.
-- Hero ekonomi sirkular dengan ilustrasi tote bag, botol, dan tanaman.
+- Header floating responsive dengan ikon menu, penanda section aktif, dan menu hamburger di mobile.
+- Hero dengan carousel 4 produk daur ulang pilihan yang berganti otomatis (bisa dijeda, digeser, dan dikendalikan dengan panah/titik).
 - Benefit cards.
-- Katalog 8 produk simulasi dengan filter kategori.
-- Preview 4 bank sampah simulasi dengan pencarian, filter material, active card, marker, dan link Google Maps.
-- Form setor sampah simulasi dengan validasi nama, WhatsApp, jenis sampah, tanggal, lokasi, dan metode setor.
+- Katalog 8 produk simulasi dengan filter kategori dan tombol Muat Lebih Banyak.
+- Direktori 4 bank sampah simulasi dengan pencarian, filter material, kartu dan pin peta yang saling sinkron, serta link Google Maps.
+- Form setor sampah simulasi dengan validasi nama, WhatsApp, jenis sampah, tanggal, lokasi, dan metode setor; lokasi tujuan menyesuaikan jenis sampah.
 - Success state form yang membedakan pengajuan simulasi dari konfirmasi jadwal.
-- Footer kontak dan label data simulasi.
+- Footer kontak, media sosial, dan label data simulasi.
 
 ## Sitemap
 
-URL Sitemap: [Tambahkan URL Sitemap Project di sini]
+Sitemap lengkap (termasuk struktur teknis, alur data, dan rencana fase berikutnya): [docs/sitemap.md](docs/sitemap.md)
+
+Ringkasan halaman Phase 1 (satu halaman, navigasi via anchor):
+
+```text
+LokaKarya — index.html
+├── Header & Navigasi
+│   ├── Beranda → #beranda
+│   ├── Katalog Produk → #katalog-produk
+│   ├── Lokasi Bank Sampah → #lokasi-bank-sampah
+│   ├── Setor Sampah → #form-setor
+│   └── Kontak → #kontak
+├── Beranda (#beranda)
+│   ├── Headline, deskripsi, CTA Jelajahi Produk & Cari Bank Sampah
+│   └── Carousel 4 produk pilihan
+├── Manfaat LokaKarya (#manfaat)
+├── Katalog Produk (#katalog-produk)
+│   ├── Filter: Semua, Plastik, Kertas/Kardus, Tekstil/Kain
+│   ├── Kartu produk → Beli via WhatsApp / Lihat di Marketplace
+│   └── Muat Lebih Banyak
+├── Lokasi Bank Sampah (#lokasi-bank-sampah)
+│   ├── Pencarian & filter jenis sampah
+│   ├── Daftar lokasi → Google Maps
+│   └── Peta skematik dengan pin
+├── Form Setor Sampah (#form-setor)
+│   ├── Formulir pendaftaran (simulasi)
+│   └── Panel Manfaat Setor Sampah
+└── Footer / Kontak (#kontak)
+```
 
 ## Design Reference
 
