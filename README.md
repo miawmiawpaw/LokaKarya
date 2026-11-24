@@ -1,21 +1,90 @@
 # LokaKarya
 
-Landing page LokaKarya untuk platform ekonomi sirkular yang memperkenalkan produk kerajinan hasil daur ulang UMKM lokal dan membantu pengguna menemukan bank sampah terdekat.
+Landing page LokaKarya merupakan platform ekonomi sirkular yang memperkenalkan produk kerajinan hasil daur ulang dari UMKM lokal dan membantu pengguna menemukan bank sampah terdekat. Website ini dirancang untuk meningkatkan kesadaran masyarakat terhadap pengelolaan sampah sekaligus mendukung perkembangan UMKM melalui pemanfaatan bahan daur ulang.
 
 ## Tentang Proyek
 
 LokaKarya menggabungkan dua kebutuhan dalam satu pengalaman:
 
-- **E-Commerce Showroom:** katalog produk daur ulang UMKM dengan informasi bahan, harga simulasi, dan tautan pembelian eksternal.
-- **Direktori Bank Sampah:** preview lokasi penyetoran dengan pencarian, filter jenis sampah, alamat, jam operasional, marker peta, dan tautan Google Maps simulasi.
+- **E-Commerce Showroom:** Katalog produk daur ulang UMKM dengan informasi bahan, harga simulasi, dan tautan pembelian eksternal.
+- **Direktori Bank Sampah:** Preview lokasi penyetoran dengan pencarian, filter jenis sampah, alamat, jam operasional, marker peta, dan tautan Google Maps simulasi.
 
-Proyek mendukung tema SDG 8 — Decent Work and Economic Growth dan SDG 12 — Responsible Consumption and Production.
+Proyek ini mendukung tujuan Sustainable Development Goals (SDGs), yaitu:
 
-Landing page ini merupakan implementasi Phase 1. Semua produk, harga, alamat, jam operasional, kontak, dan tautan adalah data simulasi untuk praktikum.
+- **SDG 8 – Decent Work and Economic Growth:** Mendukung perkembangan UMKM lokal melalui pengenalan dan promosi produk kerajinan daur ulang.
+- **SDG 12 – Responsible Consumption and Production:** Mendorong konsumsi dan produksi yang bertanggung jawab melalui pemanfaatan kembali bahan bekas.
+
+Landing page ini merupakan implementasi Phase 1. Semua produk, harga, alamat, jam operasional, kontak, dan tautan merupakan data simulasi untuk keperluan praktikum.
+
+## Tujuan Proyek
+
+1. Memperkenalkan produk kerajinan berbahan daur ulang dari UMKM lokal kepada masyarakat.
+2. Membantu pengguna memperoleh informasi mengenai bank sampah dan lokasi penyetoran sampah.
+3. Meningkatkan kesadaran masyarakat mengenai pentingnya pengelolaan dan pemanfaatan kembali sampah.
+4. Mendukung ekonomi sirkular dengan menghubungkan kegiatan daur ulang dan peluang ekonomi UMKM lokal.
+
+## Kelebihan Website
+
+Beberapa kelebihan yang ditawarkan oleh LokaKarya antara lain:
+
+1. **Menggabungkan Dua Layanan dalam Satu Platform**
+
+   Pengguna dapat mengenal produk kerajinan hasil daur ulang sekaligus mencari informasi bank sampah tanpa harus mengakses website yang berbeda.
+
+2. **Mempermudah Pencarian Bank Sampah**
+
+   Fitur pencarian dan filter membantu pengguna menemukan lokasi bank sampah berdasarkan jenis material yang ingin disetorkan.
+
+3. **Mendukung Promosi UMKM Lokal**
+
+   Katalog produk memberikan ruang bagi UMKM untuk memperkenalkan hasil kerajinan daur ulang kepada calon konsumen.
+
+4. **Tampilan Responsif dan Mudah Digunakan**
+
+   Website dirancang dengan tata letak responsif sehingga dapat diakses melalui berbagai ukuran layar, baik desktop maupun perangkat mobile.
+
+5. **Meningkatkan Kesadaran Lingkungan**
+
+   Website memberikan informasi dan alternatif bagi masyarakat untuk menerapkan kebiasaan konsumsi yang lebih bertanggung jawab serta mengurangi limbah.
+
+6. **Informasi yang Terorganisasi**
+
+   Informasi produk, lokasi bank sampah, dan formulir penyetoran disajikan dalam satu landing page dengan navigasi yang terstruktur.
+
+## Analisis 5W1H
+
+### 1. What (Apa)
+
+LokaKarya merupakan website berbasis landing page yang menggabungkan katalog produk kerajinan hasil daur ulang UMKM lokal dengan direktori bank sampah. Website ini menyediakan informasi produk, bahan yang digunakan, harga simulasi, lokasi bank sampah, serta formulir pengajuan penyetoran sampah.
+
+### 2. Who (Siapa)
+
+Website ini ditujukan untuk:
+
+- Masyarakat yang ingin membeli atau mengenal produk kerajinan hasil daur ulang.
+- Konsumen yang memiliki ketertarikan terhadap produk ramah lingkungan.
+- UMKM lokal yang menghasilkan produk dari bahan daur ulang.
+- Masyarakat yang ingin mencari informasi mengenai bank sampah dan tempat penyetoran sampah.
+
+### 3. When (Kapan)
+
+Website ini dapat digunakan ketika masyarakat ingin mencari produk kerajinan daur ulang, memperoleh informasi bank sampah, atau mengajukan penyetoran sampah. Pengembangan proyek dilakukan secara bertahap, dimulai dari perancangan hingga implementasi Phase 1.
+
+### 4. Where (Di mana)
+
+LokaKarya dirancang sebagai website yang dapat diakses melalui browser pada perangkat desktop maupun mobile. Informasi bank sampah ditampilkan berdasarkan data lokasi yang tersedia pada website. Pada tahap ini, lokasi yang ditampilkan masih menggunakan data simulasi.
+
+### 5. Why (Mengapa)
+
+Website ini dikembangkan karena informasi mengenai produk kerajinan daur ulang dan lokasi bank sampah perlu disajikan secara lebih terorganisasi dan mudah diakses. Selain itu, masih diperlukan upaya untuk memperkenalkan potensi produk daur ulang UMKM lokal serta meningkatkan kesadaran masyarakat mengenai pengelolaan sampah dan ekonomi sirkular.
+
+### 6. How (Bagaimana)
+
+LokaKarya dikembangkan menggunakan HTML5, CSS3, Bootstrap 5, dan Vanilla JavaScript. Website menggabungkan katalog produk, fitur pencarian dan filter bank sampah, tampilan lokasi melalui marker peta, serta formulir penyetoran sampah. Pengguna dapat menjelajahi informasi yang tersedia melalui navigasi landing page dan menggunakan fitur interaktif yang disediakan.
 
 ## Teknologi
 
-- HTML5 semantic
+- HTML5 Semantic
 - CSS3 dengan custom properties dan responsive layout
 - Bootstrap 5 CDN untuk grid dan navbar
 - Vanilla JavaScript untuk rendering data dan interaksi
@@ -32,6 +101,15 @@ Landing page ini merupakan implementasi Phase 1. Semua produk, harga, alamat, ja
 - Success state form yang membedakan pengajuan simulasi dari konfirmasi jadwal.
 - Footer kontak dan label data simulasi.
 
+## Sitemap
+
+URL Sitemap: [Tambahkan URL Sitemap Project di sini]
+
+## Design Reference
+
+- [Figma Mockup](https://www.figma.com/design/PoGctK8bkFvyKu710ViZau/Desain-Web?node-id=125-163)
+- [Figma Wireframe](https://www.figma.com/design/PoGctK8bkFvyKu710ViZau/Desain-Web?node-id=125-164)
+
 ## Menjalankan Proyek
 
 1. Clone repository:
@@ -41,9 +119,10 @@ Landing page ini merupakan implementasi Phase 1. Semua produk, harga, alamat, ja
    cd LokaKarya
    ```
 
-2. Buka `index.html` dengan VS Code Live Server.
+2. Buka folder project menggunakan Visual Studio Code.
+3. Jalankan file `index.html` menggunakan ekstensi Live Server.
 
-   Bootstrap dan Google Fonts dimuat melalui CDN, sehingga koneksi internet diperlukan untuk tampilan penuh.
+Bootstrap dan Google Fonts dimuat melalui CDN sehingga koneksi internet diperlukan untuk tampilan penuh.
 
 ## Struktur File
 
@@ -55,9 +134,4 @@ Landing page ini merupakan implementasi Phase 1. Semua produk, harga, alamat, ja
 
 ## Batasan Phase 1
 
-Belum tersedia backend, database, autentikasi, checkout, pembayaran, halaman katalog terpisah, halaman detail produk, atau direktori terpisah. Form setor sampah hanya simulasi frontend.
-
-## Design Reference
-
-- [Figma Mockup](https://www.figma.com/design/PoGctK8bkFvyKu710ViZau/Desain-Web?node-id=125-163)
-- [Figma Wireframe](https://www.figma.com/design/PoGctK8bkFvyKu710ViZau/Desain-Web?node-id=125-164)
+Belum tersedia backend, database, autentikasi, checkout, pembayaran, halaman katalog terpisah, halaman detail produk, atau direktori terpisah. Form setor sampah hanya merupakan simulasi frontend.
