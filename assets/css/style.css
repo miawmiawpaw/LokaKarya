@@ -493,30 +493,6 @@ a {
     background: var(--lime)
 }
 
-.hero-pause {
-    display: grid;
-    place-items: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgb(255 255 255 / .5);
-    border-radius: 50%;
-    background: rgb(16 40 24 / .35);
-    color: #fff
-}
-
-.hero-pause:hover {
-    background: rgb(16 40 24 / .6)
-}
-
-.hero-pause .icon-play,
-.hero-pause[aria-pressed="true"] .icon-pause {
-    display: none
-}
-
-.hero-pause[aria-pressed="true"] .icon-play {
-    display: block
-}
-
 /* ---------- Section umum ---------- */
 .section {
     padding: 80px 0

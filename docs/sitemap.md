@@ -35,7 +35,7 @@ LokaKarya
     │   └── Carousel 4 produk pilihan (ganti otomatis tiap 4 detik)
     │       ├── Foto, kategori, nama, dan harga produk
     │       ├── Lihat di katalog → `#katalog-produk` (tersaring ke kategori produk)
-    │       └── Kontrol: panah, titik indikator, tombol jeda/lanjut
+    │       └── Kontrol: panah dan titik indikator
     │
     ├── Manfaat LokaKarya (`#manfaat`)
     │   ├── Produk UMKM Penuh Cerita

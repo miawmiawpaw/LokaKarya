@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroEl = $('#heroCarousel');
   const heroSlides = $('#heroSlides');
   const heroDots = $('#heroDots');
-  const heroPauseBtn = $('#heroPause');
   const heroProducts = data.heroProductIds
     .map(id => data.products.find(p => p.id === id))
     .filter(Boolean);
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   heroSlides.innerHTML = heroProducts.map((p, i) => `
     <div class="carousel-item${i === 0 ? ' active' : ''}" role="group" aria-roledescription="slide" aria-label="${i + 1} dari ${heroProducts.length}">
       <div class="hero-slide">
-        <img src="${p.image}" alt="${p.name} dari ${p.materials.toLowerCase()}" width="564" height="564"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}>
+        <img src="${p.image}" alt="${p.name} dari ${p.materials.toLowerCase()}" width="564" height="564" decoding="async"${i === 0 ? ' fetchpriority="high"' : ''}>
         <div class="hero-caption">
           <div>
             <span class="tag">${p.category}</span>
@@ -49,22 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.bootstrap && heroProducts.length > 1) {
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // pause:false → jeda saat hover/fokus diatur manual agar tombol jeda pengguna tidak tertimpa.
     const heroCarousel = new bootstrap.Carousel(heroEl, { interval: 4000, ride: false, pause: false, touch: true, wrap: true });
-    let pausedByUser = reduceMotion; // Bila pengguna mengurangi animasi, jangan berganti otomatis.
+    // Bila pengguna mengurangi animasi, carousel tidak berganti otomatis (tetap bisa lewat panah/titik).
+    const autoPlay = !reduceMotion;
+    const resume = () => { if (autoPlay) heroCarousel.cycle(); };
 
-    const updatePauseButton = () => {
-      heroPauseBtn.setAttribute('aria-pressed', pausedByUser);
-      heroPauseBtn.setAttribute('aria-label', pausedByUser ? 'Lanjutkan pergantian otomatis' : 'Jeda pergantian otomatis');
-      heroSlides.setAttribute('aria-live', pausedByUser ? 'polite' : 'off');
-    };
-    const resume = () => { if (!pausedByUser) heroCarousel.cycle(); };
-
-    heroPauseBtn.addEventListener('click', () => {
-      pausedByUser = !pausedByUser;
-      updatePauseButton();
-      if (pausedByUser) heroCarousel.pause(); else heroCarousel.cycle();
-    });
+    heroSlides.setAttribute('aria-live', autoPlay ? 'off' : 'polite');
+    // Berhenti sementara selama kursor di atas carousel atau fokus keyboard ada di dalamnya.
     heroEl.addEventListener('mouseenter', () => heroCarousel.pause());
     heroEl.addEventListener('mouseleave', resume);
     heroEl.addEventListener('focusin', () => heroCarousel.pause());
@@ -77,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    updatePauseButton();
     resume();
   } else {
     // Tanpa Bootstrap JS (mis. CDN gagal): tampilkan slide pertama saja, sembunyikan kontrol.

@@ -93,7 +93,7 @@ LokaKarya dikembangkan menggunakan HTML5, CSS3, Bootstrap 5, dan Vanilla JavaScr
 ## Fitur
 
 - Header floating responsive dengan ikon menu, penanda section aktif, dan menu hamburger di mobile.
-- Hero dengan carousel 4 produk daur ulang pilihan yang berganti otomatis (bisa dijeda, digeser, dan dikendalikan dengan panah/titik).
+- Hero dengan carousel 4 produk daur ulang pilihan yang berganti otomatis (berhenti saat disorot kursor, bisa digeser, dan dikendalikan dengan panah/titik).
 - Benefit cards.
 - Katalog 8 produk simulasi dengan filter kategori dan tombol Muat Lebih Banyak.
 - Direktori 4 bank sampah simulasi dengan pencarian, filter material, kartu dan pin peta yang saling sinkron, serta link Google Maps.
