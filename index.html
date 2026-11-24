@@ -129,7 +129,8 @@
                     <p>Pilihan karya UMKM dari bahan daur ulang. Seluruh produk dan harga merupakan simulasi.</p>
                 </div>
                 <div id="productFilters" class="chip-group" role="group" aria-label="Filter kategori produk"></div>
-                <div id="products" class="row g-3 g-lg-4" aria-live="polite"></div>
+                <p id="productStatus" class="visually-hidden" role="status" aria-live="polite"></p>
+                <div id="products" class="row g-3 g-lg-4"></div>
                 <div class="text-center mt-4 mt-lg-5">
                     <button id="loadMore" type="button" class="btn btn-ghost" hidden>Muat Lebih Banyak</button>
                 </div>
@@ -216,8 +217,8 @@
                                 <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" class="form-control"
                                     placeholder="Contoh: 0812 3456 7890" autocomplete="tel" required
                                     pattern="^(?:\+62|62|0)8[1-9][0-9]{7,11}$" aria-describedby="whatsapp-err">
-                                <div id="whatsapp-err" class="invalid-feedback">Gunakan format 08…, 628…, atau +628…
-                                    tanpa spasi.</div>
+                                <div id="whatsapp-err" class="invalid-feedback">Masukkan nomor yang diawali 08, 628,
+                                    atau +628, misalnya 0812 3456 7890.</div>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label" for="wasteType">Jenis Sampah <span

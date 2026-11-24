@@ -104,10 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
   }
 
-  function renderProducts() {
+  // Screen reader cukup mendengar ringkasan hasil, bukan seluruh isi grid dibacakan ulang.
+  const productStatus = $('#productStatus');
+  const announce = text => { productStatus.textContent = text; };
+
+  function renderProducts({ silent = false } = {}) {
     const list = activeCategory === 'Semua'
       ? data.products
       : data.products.filter(p => p.category === activeCategory);
+    const shown = Math.min(visibleCount, list.length);
+    if (!silent) {
+      announce(list.length
+        ? `Menampilkan ${shown} dari ${list.length} produk kategori ${activeCategory}.`
+        : `Belum ada produk pada kategori ${activeCategory}.`);
+    }
 
     if (!list.length) {
       productGrid.innerHTML = `
@@ -154,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newCard = productGrid.children[firstNew];
     if (newCard) $('a', newCard)?.focus({ preventScroll: true });
   });
-  renderProducts();
+  renderProducts({ silent: true });
 
   // Tombol "Lihat di katalog" di carousel ikut menyaring katalog ke kategori produk itu.
   heroSlides.addEventListener('click', e => {
@@ -189,10 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#locationCount').textContent = `${list.length} lokasi ditemukan`;
 
     locationList.innerHTML = list.length ? list.map(x => `
-      <article class="location-card" tabindex="0" data-id="${x.id}" aria-label="${x.number}. ${x.name}">
+      <article class="location-card" tabindex="0" data-id="${x.id}">
         <span class="loc-num" aria-hidden="true">${x.number}</span>
         <div>
-          <h4>${x.name}</h4>
+          <h4><span class="visually-hidden">Lokasi ${x.number}: </span>${x.name}</h4>
           <div class="loc-tags">${x.acceptedWasteTypes.map(t => `<span>${t}</span>`).join('')}</div>
           <p class="loc-meta">${ICON_PIN}<span>${x.address}</span></p>
           <p class="loc-meta">${ICON_CLOCK}<span>${x.operatingHours}</span></p>
@@ -271,8 +281,15 @@ document.addEventListener('DOMContentLoaded', () => {
   wasteSelect.addEventListener('change', renderDestinations);
   renderDestinations();
 
+  // Nomor WhatsApp boleh diketik dengan spasi, tanda hubung, titik, atau kurung (mis. "0812 3456 7890");
+  // dibersihkan dulu sebelum dicocokkan dengan pola di atribut pattern.
+  const phoneInput = $('#whatsapp');
+  const normalizePhone = () => { phoneInput.value = phoneInput.value.replace(/[\s.()-]/g, ''); };
+  phoneInput.addEventListener('blur', normalizePhone);
+
   form.addEventListener('submit', e => {
     e.preventDefault();
+    normalizePhone();
     status.className = 'status';
     status.textContent = '';
 

@@ -989,10 +989,11 @@ a {
     color: #b42318
 }
 
+/* Border #8a8a8a: kontras 3.45:1 terhadap putih (WCAG 1.4.11 minta ≥ 3:1 untuk batas kolom) */
 .form-control,
 .form-select {
     min-height: 48px;
-    border-color: #cfcfcf;
+    border-color: #8a8a8a;
     border-radius: var(--r-sm);
     font-size: .9375rem;
     padding: .7rem .9rem;
