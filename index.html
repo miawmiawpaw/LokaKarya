@@ -5,7 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>LokaKarya — Ubah Limbah Jadi Karya</title>
+    <meta name="description"
+        content="Platform belanja produk daur ulang UMKM lokal dan direktori bank sampah terdekat. Data simulasi untuk praktikum.">
+    <link rel="icon" href="assets/img/logo/logo-leaf.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap"
         rel="stylesheet">
@@ -14,166 +18,323 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <!-- Header: panel putih melayang (mockup Figma) -->
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg container" aria-label="Navigasi utama"><a class="navbar-brand"
-                href="#beranda"><img src="assets/img/logo/logo-leaf.svg" alt="" width="28"> LokaKarya</a><button
-                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
-                aria-label="Buka menu"><span class="navbar-toggler-icon"></span></button>
-            <div id="navmenu" class="collapse navbar-collapse">
-                <ul class="navbar-nav mx-auto">
-                    <li><a class="nav-link" href="#beranda">Beranda</a></li>
-                    <li><a class="nav-link" href="#katalog-produk">Katalog Produk</a></li>
-                    <li><a class="nav-link" href="#lokasi-bank-sampah">Lokasi Bank Sampah</a></li>
-                    <li><a class="nav-link" href="#form-setor">Setor Sampah</a></li>
-                    <li><a class="nav-link" href="#kontak">Kontak</a></li>
-                </ul><a class="btn btn-primary" href="#form-setor">Mulai Setor</a>
-            </div>
-        </nav>
+        <div class="container-xxl">
+            <nav class="navbar navbar-expand-xl nav-panel" aria-label="Navigasi utama">
+                <a class="brand" href="#beranda">
+                    <img src="assets/img/logo/logo-leaf.svg" alt="" width="28" height="28">
+                    <span>LokaKarya</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                    aria-controls="navmenu" aria-expanded="false" aria-label="Buka menu navigasi">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navmenu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav nav-links mx-auto">
+                        <li><a class="nav-link" href="#beranda"><img src="assets/img/icons/nav-home.svg" alt=""
+                                    width="17" height="17">Beranda</a></li>
+                        <li><a class="nav-link" href="#katalog-produk"><img src="assets/img/icons/nav-bag.svg" alt=""
+                                    width="17" height="17">Katalog Produk</a></li>
+                        <li><a class="nav-link" href="#lokasi-bank-sampah"><img src="assets/img/icons/nav-pin.svg"
+                                    alt="" width="17" height="17">Lokasi Bank Sampah</a></li>
+                        <li><a class="nav-link" href="#form-setor"><img src="assets/img/icons/nav-recycle.svg" alt=""
+                                    width="17" height="17">Setor Sampah</a></li>
+                        <li><a class="nav-link" href="#kontak"><img src="assets/img/icons/nav-mail.svg" alt=""
+                                    width="17" height="17">Kontak</a></li>
+                    </ul>
+                    <a class="btn btn-primary nav-cta" href="#form-setor">Setor Sampah</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main>
+
+    <main id="main">
+        <!-- Hero -->
         <section id="beranda" class="hero">
-            <div class="container row align-items-center g-5">
-                <div class="col-lg-6"><span class="eyebrow">EKONOMI SIRKULAR LOKAL</span>
-                    <h1>Ubah Limbah Jadi Karya, Dukung Ekonomi Lokal.</h1>
-                    <p class="lead">Temukan produk kerajinan hasil daur ulang UMKM lokal dan lokasi bank sampah terdekat
-                        untuk memulai langkah kecilmu.</p>
-                    <div class="d-flex flex-wrap gap-3"><a class="btn btn-primary btn-lg"
-                            href="#katalog-produk">Jelajahi Produk</a><a class="btn btn-outline-primary btn-lg"
-                            href="#lokasi-bank-sampah">Cari Bank Sampah</a></div><small class="sim-label">Data simulasi
-                        untuk praktikum</small>
-                </div>
-                <div class="col-lg-6 text-center"><img class="hero-art" src="assets/img/hero/hero-illustration.svg"
-                        alt="Ilustrasi ekonomi sirkular" fetchpriority="high"></div>
-            </div>
-        </section>
-        <section id="manfaat" class="section">
+            <img class="hero-leaf hero-leaf-1" src="assets/img/hero/decorative-leaf.svg" alt="" aria-hidden="true">
+            <img class="hero-leaf hero-leaf-2" src="assets/img/hero/decorative-leaf.svg" alt="" aria-hidden="true">
             <div class="container">
-                <div class="section-heading"><span class="eyebrow">KENAPA LOKAKARYA?</span>
-                    <h2>Bergerak bersama, berdampak nyata.</h2>
-                </div>
-                <div id="benefits" class="row g-4"></div>
-            </div>
-        </section>
-        <section id="katalog-produk" class="section section-soft">
-            <div class="container">
-                <div class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-3">
-                    <div><span class="eyebrow">KATALOG PRODUK</span>
-                        <h2>Karya baik untuk rumahmu</h2>
-                        <p>Semua harga dan informasi merupakan data simulasi.</p>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="pill-eyebrow"><img src="assets/img/logo/logo-leaf.svg" alt="" width="14"
+                                height="14">Langkah kecil, dampak besar</span>
+                        <h1>Ubah Limbah Jadi Karya, Dukung Ekonomi Lokal.</h1>
+                        <p class="lead">Platform belanja produk daur ulang ramah lingkungan dari UMKM lokal dan
+                            direktori penyetoran sampah terdekat.</p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary btn-lg" href="#katalog-produk">Jelajahi Produk</a>
+                            <a class="btn btn-outline-primary btn-lg" href="#lokasi-bank-sampah">Cari Bank Sampah</a>
+                        </div>
+                        <p class="sim-label"><span class="dot" aria-hidden="true"></span>Data simulasi untuk praktikum
+                        </p>
                     </div>
-                    <div id="productFilters" class="filter-group" role="group" aria-label="Filter kategori"></div>
-                </div>
-                <div id="products" class="row g-4"></div>
-            </div>
-        </section>
-        <section id="lokasi-bank-sampah" class="section">
-            <div class="container">
-                <div class="section-heading"><span class="eyebrow">DIREKTORI LOKASI</span>
-                    <h2>Bank sampah lebih dekat</h2>
-                    <p id="locationCount"></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-5">
-                        <div class="d-flex gap-2 mb-3"><label class="visually-hidden" for="locationSearch">Cari
-                                lokasi</label><input id="locationSearch" class="form-control"
-                                placeholder="Cari nama atau alamat..."><select id="locationFilter" class="form-select"
-                                aria-label="Filter material">
-                                <option value="">Semua material</option>
-                                <option>Plastik</option>
-                                <option>Kertas/Kardus</option>
-                                <option>Tekstil/Kain</option>
-                            </select></div>
-                        <div id="locations" class="location-list"></div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="map-box"><img src="assets/img/hero/map-preview.jpg"
-                                alt="Peta skematik lokasi bank sampah" loading="lazy">
-                            <div id="mapPins"></div>
+                    <div class="col-lg-6">
+                        <!-- Carousel produk daur ulang (slide diisi oleh main.js dari data.js) -->
+                        <div id="heroCarousel" class="carousel slide hero-carousel" aria-roledescription="carousel"
+                            aria-label="Produk daur ulang pilihan">
+                            <div id="heroSlides" class="carousel-inner"></div>
+                            <button class="carousel-control-prev hero-nav" type="button" data-bs-target="#heroCarousel"
+                                data-bs-slide="prev" aria-label="Produk sebelumnya">
+                                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg>
+                            </button>
+                            <button class="carousel-control-next hero-nav" type="button" data-bs-target="#heroCarousel"
+                                data-bs-slide="next" aria-label="Produk berikutnya">
+                                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                            <div class="hero-carousel-bar">
+                                <div id="heroDots" class="hero-dots"></div>
+                                <button id="heroPause" type="button" class="hero-pause" aria-pressed="false"
+                                    aria-label="Jeda pergantian otomatis">
+                                    <svg class="icon-pause" aria-hidden="true" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="6" y="5" width="4" height="14" rx="1" />
+                                        <rect x="14" y="5" width="4" height="14" rx="1" />
+                                    </svg>
+                                    <svg class="icon-play" aria-hidden="true" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M7 5v14l12-7z" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="form-setor" class="section section-soft">
+
+        <!-- Manfaat -->
+        <section id="manfaat" class="section section-tight" aria-labelledby="manfaat-title">
             <div class="container">
-                <div class="row g-5 align-items-start">
-                    <div class="col-lg-7"><span class="eyebrow">SETOR SAMPAH</span>
-                        <h2>Rencanakan setoranmu</h2>
-                        <p>Isi formulir simulasi. Pengelola akan menghubungi melalui WhatsApp untuk validasi jadwal.</p>
-                        <form id="depositForm" novalidate class="row g-3">
-                            <div class="col-md-6"><label for="fullName">Nama lengkap *</label><input id="fullName"
-                                    name="fullName" class="form-control" required></div>
-                            <div class="col-md-6"><label for="whatsapp">Nomor WhatsApp *</label><input id="whatsapp"
-                                    name="whatsapp" class="form-control" placeholder="08xxxxxxxxxx" required
-                                    pattern="^(?:\+62|62|0)8[1-9][0-9]{7,11}$"></div>
-                            <div class="col-md-6"><label for="wasteType">Jenis sampah *</label><select id="wasteType"
-                                    name="wasteType" class="form-select" required>
-                                    <option value="">Pilih jenis</option>
+                <h2 id="manfaat-title" class="visually-hidden">Kenapa LokaKarya</h2>
+                <div id="benefits" class="row g-3 g-lg-4"></div>
+            </div>
+        </section>
+
+        <!-- Katalog -->
+        <section id="katalog-produk" class="section" aria-labelledby="katalog-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="katalog-title">Katalog Produk</h2>
+                    <p>Pilihan karya UMKM dari bahan daur ulang. Seluruh produk dan harga merupakan simulasi.</p>
+                </div>
+                <div id="productFilters" class="chip-group" role="group" aria-label="Filter kategori produk"></div>
+                <div id="products" class="row g-3 g-lg-4" aria-live="polite"></div>
+                <div class="text-center mt-4 mt-lg-5">
+                    <button id="loadMore" type="button" class="btn btn-ghost" hidden>Muat Lebih Banyak</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Direktori bank sampah -->
+        <section id="lokasi-bank-sampah" class="section section-soft" aria-labelledby="lokasi-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 id="lokasi-title">Lokasi Bank Sampah</h2>
+                    <p>Temukan tempat penyetoran dan periksa jenis sampah yang diterima. Direktori lokasi simulasi.
+                    </p>
+                </div>
+                <div class="directory-toolbar">
+                    <div class="search-field">
+                        <label class="visually-hidden" for="locationSearch">Cari lokasi</label>
+                        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="m20 20-3.5-3.5" />
+                        </svg>
+                        <input id="locationSearch" type="search" class="form-control"
+                            placeholder="Cari nama lokasi atau alamat..." autocomplete="off">
+                    </div>
+                    <div class="select-field">
+                        <label class="visually-hidden" for="locationFilter">Filter jenis sampah</label>
+                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 4h18l-7 8.5V19l-4 2v-8.5z" />
+                        </svg>
+                        <select id="locationFilter" class="form-select">
+                            <option value="">Semua jenis</option>
+                            <option>Plastik</option>
+                            <option>Kertas/Kardus</option>
+                            <option>Tekstil/Kain</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="list-head">
+                            <h3>Daftar Bank Sampah</h3>
+                            <p id="locationCount" aria-live="polite"></p>
+                        </div>
+                        <div id="locations" class="location-list"></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="map-box">
+                            <img src="assets/img/hero/map-preview.jpg" alt="Peta skematik lokasi bank sampah"
+                                loading="lazy" width="1880" height="1256">
+                            <div id="mapPins"></div>
+                            <p class="map-fallback">Peta belum dapat ditampilkan. Anda tetap dapat melihat alamat pada
+                                daftar lokasi.</p>
+                        </div>
+                        <p class="map-note">Penanda 1–4 mengikuti urutan kartu. Peta skematik, bukan peta faktual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form setor -->
+        <section id="form-setor" class="section" aria-labelledby="setor-title">
+            <div class="container">
+                <div class="row g-4 g-lg-5 align-items-stretch">
+                    <div class="col-lg-7">
+                        <div class="section-heading mb-3">
+                            <h2 id="setor-title">Form Setor Sampah</h2>
+                            <p>Daftarkan rencana penyetoran Anda ke bank sampah pilihan. Formulir ini adalah simulasi.
+                            </p>
+                        </div>
+                        <p class="form-hint">Kolom bertanda <span aria-hidden="true">*</span> wajib diisi.</p>
+                        <form id="depositForm" novalidate class="row g-3 deposit-form">
+                            <div class="col-md-6">
+                                <label class="form-label" for="fullName">Nama Lengkap <span
+                                        class="req">*</span></label>
+                                <input id="fullName" name="fullName" class="form-control"
+                                    placeholder="Masukkan nama lengkap" autocomplete="name" required
+                                    aria-describedby="fullName-err">
+                                <div id="fullName-err" class="invalid-feedback">Nama lengkap wajib diisi.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="whatsapp">Nomor WhatsApp <span
+                                        class="req">*</span></label>
+                                <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" class="form-control"
+                                    placeholder="Contoh: 0812 3456 7890" autocomplete="tel" required
+                                    pattern="^(?:\+62|62|0)8[1-9][0-9]{7,11}$" aria-describedby="whatsapp-err">
+                                <div id="whatsapp-err" class="invalid-feedback">Gunakan format 08…, 628…, atau +628…
+                                    tanpa spasi.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="wasteType">Jenis Sampah <span
+                                        class="req">*</span></label>
+                                <select id="wasteType" name="wasteType" class="form-select" required
+                                    aria-describedby="wasteType-err">
+                                    <option value="">Pilih jenis sampah</option>
                                     <option>Plastik</option>
                                     <option>Kertas/Kardus</option>
                                     <option>Tekstil/Kain</option>
-                                </select></div>
-                            <div class="col-md-6"><label for="depositDate">Tanggal setor *</label><input
-                                    id="depositDate" name="depositDate" type="date" class="form-control" required></div>
-                            <div class="col-md-6"><label for="destination">Lokasi tujuan *</label><select
-                                    id="destination" name="destination" class="form-select" required>
-                                    <option value="">Pilih lokasi</option>
-                                </select></div>
-                            <div class="col-md-6"><label for="method">Metode penyetoran *</label><select id="method"
-                                    name="method" class="form-select" required>
-                                    <option value="">Pilih metode</option>
-                                    <option>Antar sendiri</option>
-                                    <option>Minta dijemput</option>
-                                </select></div>
-                            <div class="col-12"><label for="notes">Catatan</label><textarea id="notes" name="notes"
-                                    class="form-control" rows="3" maxlength="300"></textarea></div>
-                            <div class="col-12"><button class="btn btn-primary" type="submit">Kirim Pendaftaran</button>
-                                <div id="formStatus" class="status mt-3" role="status" aria-live="polite"></div>
+                                </select>
+                                <div id="wasteType-err" class="invalid-feedback">Pilih jenis sampah.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label" for="depositDate">Tanggal <span class="req">*</span></label>
+                                <input id="depositDate" name="depositDate" type="date" class="form-control" required
+                                    aria-describedby="depositDate-help depositDate-err">
+                                <div id="depositDate-help" class="form-text">Pilih tanggal sesuai jam buka lokasi.</div>
+                                <div id="depositDate-err" class="invalid-feedback">Pilih tanggal hari ini atau setelahnya.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="destination">Lokasi Tujuan <span
+                                        class="req">*</span></label>
+                                <select id="destination" name="destination" class="form-select" required
+                                    aria-describedby="destination-help destination-err">
+                                    <option value="">Pilih lokasi tujuan</option>
+                                </select>
+                                <div id="destination-help" class="form-text">Hanya lokasi yang menerima jenis sampah
+                                    pilihan Anda yang ditampilkan.</div>
+                                <div id="destination-err" class="invalid-feedback">Pilih lokasi tujuan.</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="notes">Catatan</label>
+                                <textarea id="notes" name="notes" class="form-control" rows="3" maxlength="300"
+                                    placeholder="Tuliskan kondisi sampah atau informasi tambahan"></textarea>
+                            </div>
+                            <fieldset class="col-12">
+                                <legend class="form-label">Metode Penyetoran <span class="req">*</span></legend>
+                                <div class="radio-row">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="method" id="methodSelf"
+                                            value="Antar sendiri" required>
+                                        <label class="form-check-label" for="methodSelf">Antar sendiri</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="method" id="methodPickup"
+                                            value="Minta dijemput" required>
+                                        <label class="form-check-label" for="methodPickup">Minta dijemput</label>
+                                        <div class="invalid-feedback">Pilih metode penyetoran.</div>
+                                    </div>
+                                </div>
+                                <p class="form-text mb-0">Pengelola akan menghubungi Anda melalui WhatsApp untuk
+                                    konfirmasi jadwal dan ketersediaan penjemputan.</p>
+                            </fieldset>
+                            <div class="col-12">
+                                <button class="btn btn-primary btn-submit" type="submit">Kirim Pendaftaran</button>
+                                <div id="formStatus" class="status" role="status" aria-live="polite"></div>
                             </div>
                         </form>
                     </div>
-                    <aside class="col-lg-5 benefit-panel">
-                        <h3>Setoranmu berarti</h3>
-                        <p>Pilah material sebelum setor, lalu bantu UMKM lokal menciptakan karya baru.</p>
-                        <ul>
-                            <li>Kurangi sampah tercampur</li>
-                            <li>Dukung pengrajin sekitar</li>
-                            <li>Mulai dari langkah sederhana</li>
-                        </ul>
+                    <aside class="col-lg-5" aria-labelledby="manfaat-setor-title">
+                        <div class="benefit-panel">
+                            <h3 id="manfaat-setor-title">Manfaat Setor Sampah</h3>
+                            <ul>
+                                <li>Mengurangi sampah yang berakhir di TPA.</li>
+                                <li>Membantu pemilahan dan pemanfaatan kembali bahan.</li>
+                                <li>Mendukung bahan baku serta peluang usaha UMKM lokal.</li>
+                            </ul>
+                            <h4>Sebelum menyetor</h4>
+                            <p>Pisahkan sampah berdasarkan jenisnya. Pastikan bahan bersih dan kering, lalu cek jam buka
+                                lokasi tujuan.</p>
+                            <img class="panel-art" src="assets/img/hero/hero-illustration.svg" alt="" width="420"
+                                height="261" loading="lazy">
+                        </div>
                     </aside>
                 </div>
             </div>
         </section>
     </main>
-    <footer id="kontak">
+
+    <footer id="kontak" class="site-footer">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-5">
-                    <h2>LokaKarya</h2>
-                    <p>Ruang digital untuk karya daur ulang dan komunitas yang peduli.</p>
+                <div class="col-lg-6">
+                    <img class="footer-logo" src="assets/img/logo/Logo%20LokaKarya.svg" alt="LokaKarya" width="157"
+                        height="33">
+                    <p class="footer-tagline">Karya lokal, dampak berarti. Temukan produk daur ulang UMKM dan bank
+                        sampah di sekitarmu.</p>
                 </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <h3>Jelajahi</h3>
+                <nav class="col-6 col-lg-3" aria-labelledby="footer-jelajahi">
+                    <h2 id="footer-jelajahi">Jelajahi</h2>
                     <a href="#katalog-produk">Katalog Produk</a>
                     <a href="#lokasi-bank-sampah">Lokasi Bank Sampah</a>
                     <a href="#form-setor">Setor Sampah</a>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <h3>Hubungi Kami</h3>
+                </nav>
+                <div class="col-6 col-lg-3">
+                    <h2>Hubungi kami</h2>
                     <a href="mailto:halo@lokakarya.id">halo@lokakarya.id</a>
-                    <a href="https://wa.me/6281200002026">+62 812 0000 2026</a>
-                    <p class="small">Jl. Daur Ulang No. 10, Depok (Simulasi)</p>
+                    <a href="https://wa.me/6281200002026" target="_blank" rel="noopener">+62 812 0000 2026</a>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Instagram LokaKarya (simulasi)"><img src="assets/img/icons/social-instagram.svg"
+                                alt="" width="20" height="20"></a>
+                        <a href="https://wa.me/6281200002026" target="_blank" rel="noopener"
+                            aria-label="Chat WhatsApp LokaKarya (simulasi)"><img src="assets/img/icons/social-chat.svg"
+                                alt="" width="20" height="20"></a>
+                    </div>
                 </div>
             </div>
-
-            <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center">
-                <span class="mb-2 mb-sm-0">&copy; 2026 LokaKarya</span>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LokaKarya</span>
                 <span>Data simulasi untuk praktikum</span>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/main.js"></script>

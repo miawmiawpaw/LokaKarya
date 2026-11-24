@@ -22,6 +22,9 @@ const LOKAKARYA_DATA = {
     }
   },
 
+  // Produk yang tampil di carousel hero (urutan = urutan slide).
+  heroProductIds: ["prod-2", "prod-4", "prod-5", "prod-7"],
+
   categories: [
     { id: "all", name: "Semua", slug: "Semua" },
     { id: "plastik", name: "Plastik", slug: "Plastik" },
