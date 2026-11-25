@@ -105,33 +105,7 @@ LokaKarya dikembangkan menggunakan HTML5, CSS3, Bootstrap 5, dan Vanilla JavaScr
 
 Sitemap lengkap (termasuk struktur teknis, alur data, dan rencana fase berikutnya): [docs/sitemap.md](docs/sitemap.md)
 
-Ringkasan halaman Phase 1 (satu halaman, navigasi via anchor):
-
-```text
-LokaKarya — index.html
-├── Header & Navigasi
-│   ├── Beranda → #beranda
-│   ├── Katalog Produk → #katalog-produk
-│   ├── Lokasi Bank Sampah → #lokasi-bank-sampah
-│   ├── Setor Sampah → #form-setor
-│   └── Kontak → #kontak
-├── Beranda (#beranda)
-│   ├── Headline, deskripsi, CTA Jelajahi Produk & Cari Bank Sampah
-│   └── Carousel 4 produk pilihan
-├── Manfaat LokaKarya (#manfaat)
-├── Katalog Produk (#katalog-produk)
-│   ├── Filter: Semua, Plastik, Kertas/Kardus, Tekstil/Kain
-│   ├── Kartu produk → Beli via WhatsApp / Lihat di Marketplace
-│   └── Muat Lebih Banyak
-├── Lokasi Bank Sampah (#lokasi-bank-sampah)
-│   ├── Pencarian & filter jenis sampah
-│   ├── Daftar lokasi → Google Maps
-│   └── Peta skematik dengan pin
-├── Form Setor Sampah (#form-setor)
-│   ├── Formulir pendaftaran (simulasi)
-│   └── Panel Manfaat Setor Sampah
-└── Footer / Kontak (#kontak)
-```
+docs/Sitemap LokaKarya.png
 
 ## Design Reference
 
