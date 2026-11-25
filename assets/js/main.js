@@ -121,12 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
     productGrid.innerHTML = list.slice(0, visibleCount).map(p => `
       <div class="col-6 col-lg-3">
         <article class="product-card">
-          <div class="product-media">
-            <img src="${p.image}" alt="${p.name} dari ${p.materials.toLowerCase()}" loading="lazy" width="564" height="564">
-          </div>
+          <a class="product-media" href="produk.html?id=${p.id}" tabindex="-1" aria-hidden="true">
+            <img src="${p.image}" alt="" loading="lazy" width="564" height="564">
+          </a>
           <div class="product-info">
             <span class="tag">${p.category}</span>
-            <h3>${p.name}</h3>
+            <h3><a href="produk.html?id=${p.id}">${p.name}</a></h3>
             <p class="material">Bahan: ${p.materials}</p>
             <strong class="price">${p.priceFormatted.replace('Rp', 'Rp ')}</strong>
             <a class="btn btn-wa" href="${waLink(p.whatsappText)}" target="_blank" rel="noopener">Beli via WhatsApp</a>
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     // Pindahkan fokus ke produk pertama yang baru dimuat (aksesibilitas keyboard).
     const newCard = productGrid.children[firstNew];
-    if (newCard) $('a', newCard)?.focus({ preventScroll: true });
+    if (newCard) $('h3 a', newCard).focus({ preventScroll: true });
   });
   renderProducts({ silent: true });
 
