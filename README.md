@@ -96,6 +96,7 @@ LokaKarya dikembangkan menggunakan HTML5, CSS3, Bootstrap 5, dan Vanilla JavaScr
 - Hero dengan carousel 4 produk daur ulang pilihan yang berganti otomatis (berhenti saat disorot kursor, bisa digeser, dan dikendalikan dengan panah/titik).
 - Benefit cards.
 - Katalog 8 produk simulasi dengan filter kategori dan tombol Muat Lebih Banyak.
+- Halaman detail produk (`produk.html?id=...`) berisi foto, harga, deskripsi, bahan, asal material, penjual, tombol beli, dan rekomendasi produk lainnya.
 - Direktori 4 bank sampah simulasi dengan pencarian, filter material, kartu dan pin peta yang saling sinkron, serta link Google Maps.
 - Form setor sampah simulasi dengan validasi nama, WhatsApp, jenis sampah, tanggal, lokasi, dan metode setor; lokasi tujuan menyesuaikan jenis sampah.
 - Success state form yang membedakan pengajuan simulasi dari konfirmasi jadwal.
@@ -129,11 +130,13 @@ Bootstrap dan Google Fonts dimuat melalui CDN sehingga koneksi internet diperluk
 ## Struktur File
 
 - `index.html` — markup landing page.
+- `produk.html` — halaman detail produk (satu file untuk semua produk, dipilih lewat `?id=`).
 - `assets/css/style.css` — design tokens, layout, komponen, dan responsive rules.
 - `assets/js/data.js` — data produk, manfaat, lokasi, dan konfigurasi kontak.
-- `assets/js/main.js` — rendering dan interaksi Vanilla JavaScript.
+- `assets/js/main.js` — rendering dan interaksi Vanilla JavaScript untuk landing page.
+- `assets/js/produk.js` — mengisi halaman detail produk dari `data.js`.
 - `assets/img/` — aset visual lokal hasil ekspor Figma.
 
 ## Batasan Phase 1
 
-Belum tersedia backend, database, autentikasi, checkout, pembayaran, halaman katalog terpisah, halaman detail produk, atau direktori terpisah. Form setor sampah hanya merupakan simulasi frontend.
+Belum tersedia backend, database, autentikasi, checkout, pembayaran, halaman katalog terpisah, atau direktori terpisah. Form setor sampah hanya merupakan simulasi frontend.

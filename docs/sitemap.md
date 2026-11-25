@@ -103,6 +103,20 @@ LokaKarya
         ├── Media sosial simulasi
         ├── Hak cipta
         └── Label data simulasi untuk praktikum
+
+LokaKarya
+└── Detail Produk (`produk.html?id=<id produk>`, mis. `produk.html?id=prod-1`)
+    ├── Dibuka dari: nama/foto kartu produk di katalog landing page
+    ├── Header (menu Katalog Produk aktif, tautan → `index.html#...`)
+    ├── Breadcrumb: Beranda / Katalog Produk / <nama produk>
+    ├── Foto produk
+    ├── Kategori, nama, harga, deskripsi
+    ├── Bahan, asal material ("Informasi belum tersedia" bila kosong), penjual
+    ├── Beli via WhatsApp → kanal eksternal simulasi
+    ├── Lihat di Marketplace → kanal eksternal simulasi
+    ├── Produk Lainnya (4 produk, kategori yang sama didahulukan)
+    ├── Pesan "Produk tidak ditemukan" bila id salah/kosong
+    └── Footer
 ```
 
 ## Struktur Teknis
@@ -110,12 +124,14 @@ LokaKarya
 ```text
 LokaKarya
 ├── index.html
+├── produk.html
 ├── assets/
 │   ├── css/
 │   │   └── style.css
 │   ├── js/
 │   │   ├── data.js
-│   │   └── main.js
+│   │   ├── main.js
+│   │   └── produk.js
 │   └── img/
 │       ├── hero/
 │       ├── icons/
@@ -151,6 +167,17 @@ assets/js/main.js
 index.html
     ├── DOM sections
     └── user interaction
+
+assets/js/data.js (products)
+            ↓
+assets/js/produk.js
+    ├── baca ?id= dari alamat
+    ├── cari produk di data.js
+    ├── isi detail produk
+    ├── pilih & tampilkan produk lainnya
+    └── tampilkan "Produk tidak ditemukan" bila id salah
+            ↓
+produk.html
 ```
 
 ## Navigasi Eksternal
@@ -202,7 +229,6 @@ Fase berikutnya **tidak otomatis berarti** checkout, pembayaran, atau transaksi 
 ## Halaman dan Fitur yang Belum Tersedia
 
 - Halaman katalog produk terpisah.
-- Halaman detail produk.
 - Halaman direktori bank sampah terpisah.
 - Halaman login dan registrasi.
 - Dashboard UMKM.
