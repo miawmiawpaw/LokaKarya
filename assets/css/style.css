@@ -1198,6 +1198,116 @@ textarea.form-control {
     font-size: .8125rem
 }
 
+/* ---------- Tautan di kartu produk (menuju halaman detail) ---------- */
+a.product-media {
+    display: block
+}
+
+.product-info h3 a {
+    color: inherit;
+    text-decoration: none
+}
+
+.product-info h3 a:hover {
+    color: var(--olive);
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
+
+/* ---------- Halaman detail produk (produk.html) ---------- */
+.detail-section {
+    padding-top: 24px
+}
+
+.breadcrumb-simple {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0 0 24px;
+    font-size: .875rem;
+    color: var(--muted)
+}
+
+/* Garis miring "/" di antara item breadcrumb */
+.breadcrumb-simple li+li::before {
+    content: "/";
+    margin-right: 6px;
+    color: #9a9a9a
+}
+
+.breadcrumb-simple a {
+    color: var(--forest)
+}
+
+.detail-media {
+    aspect-ratio: 1;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    background: #eef4f0;
+    box-shadow: var(--shadow-md)
+}
+
+.detail-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.detail-title {
+    font: 700 clamp(1.75rem, 3vw, 2.25rem)/1.2 var(--font-display);
+    color: var(--forest);
+    margin: 4px 0 8px
+}
+
+.detail-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 16px
+}
+
+.detail-desc {
+    color: var(--muted);
+    margin-bottom: 20px
+}
+
+/* Tabel kecil: Bahan / Asal material / Penjual */
+.detail-info {
+    margin: 0 0 24px;
+    border-top: 1px solid var(--border)
+}
+
+.detail-info div {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border)
+}
+
+.detail-info dt {
+    font-size: .875rem;
+    font-weight: 600
+}
+
+.detail-info dd {
+    margin: 0;
+    font-size: .9375rem
+}
+
+/* Dipakai saat data asal material belum ada */
+.detail-info .is-empty {
+    color: var(--muted);
+    font-style: italic
+}
+
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
 /* ---------- Reveal saat scroll ---------- */
 .reveal {
     opacity: 0;
@@ -1339,6 +1449,15 @@ textarea.form-control {
 
     .footer-bottom {
         flex-direction: column
+    }
+
+    .detail-actions .btn {
+        flex: 1 1 100%
+    }
+
+    .detail-info div {
+        grid-template-columns: 1fr;
+        gap: 2px
     }
 }
 
