@@ -106,7 +106,7 @@ LokaKarya dikembangkan menggunakan HTML5, CSS3, Bootstrap 5, dan Vanilla JavaScr
 
 Sitemap lengkap (termasuk struktur teknis, alur data, dan rencana fase berikutnya): [docs/sitemap.md](docs/sitemap.md)
 
-docs/Sitemap LokaKarya.png
+![Sitemap LokaKarya](docs/Sitemap%20LokaKarya.png)
 
 ## Design Reference
 
